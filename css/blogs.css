@@ -1,0 +1,386 @@
+@import url("../css/variables.css");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+.siemreap-header {
+  padding-top: 7.3vh;
+  height: 800px;
+  width: 100%;
+}
+.siemreap-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom center;
+  position: relative;
+  filter: brightness(0.9);
+  overflow: hidden;
+}
+.siemreap-hero-title {
+  position: absolute;
+  z-index: 2;
+  top: 15%;
+  left: 7%;
+}
+.siemreap-header-text,
+.siemreap-header-text-btn,
+.siemreap-header-sub-text {
+  font-family: var(--font-arbutus);
+}
+.siemreap-header-text,
+.siemreap-header-text-btn {
+  font-size: var(--text-heading);
+  text-decoration: none;
+}
+.siemreap-header-text-btn {
+  background-color: rgba(var(--white), 0.2);
+  padding: 10px 20px;
+  border: 1px solid var(--text-primary);
+}
+.siemreap-header-text-btn:hover {
+  background-color: var(--text-primary);
+}
+.siemreap-header-title {
+  font-family: var(--font-arbutus);
+  font-size: var(--header-text);
+}
+.siemreap-header-description {
+  font-family: var(--font-primary);
+  font-size: 25px;
+  padding-right: 40%;
+}
+.siemreap-header-bottom {
+  background-color: rgba(var(--white), var(--cd-opacity));
+}
+.siemreap-btm-title,
+.siemreap-btm-text {
+  font-family: var(--font-arbutus);
+  font-size: var(--sub-heading);
+}
+/* you will experiences  */
+.siemreap-visit-exper {
+  margin: 80px 0px;
+}
+.visit-experience {
+  font-family: var(--font-arbutus);
+  font-size: 13px;
+}
+.visit-exper-title {
+  font-family: var(--font-arbutus);
+  font-size: var(--text-header);
+}
+.visit-exper-sub-text {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+}
+.visit-exper-card {
+  background-color: rgba(var(--white), var(--cd-opacity));
+  width: 380px;
+  height: 300px;
+}
+.visit-card-num {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+  padding-top: 7px;
+}
+.visit-card-title {
+  font-family: var(--font-primary);
+  font-size: 30px;
+}
+.visit-card-desription {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+}
+/* your journey */
+.siemreap-journey {
+  padding: 50px 0;
+}
+.journey-header {
+  font-family: var(--font-arbutus);
+  font-size: 13px;
+}
+.journey-title {
+  font-family: var(--font-arbutus);
+  font-size: var(--text-header);
+  padding-right: 35%;
+}
+.journey-sub-text {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+}
+
+.days-buttons {
+  margin-top: 50px;
+  border-bottom: 2px solid var(--text-white);
+}
+.day-btn {
+  background: none;
+  border: none;
+}
+.day-btn:hover {
+  background: rgba(var(--white), var(--cd-opacity));
+}
+.day-btn-title,
+.day-btn-sub-text {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+}
+.day-btn.active {
+  opacity: 1;
+}
+/* .day-btn.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: pink;
+} */
+
+/* Inerr */
+.day-panel {
+  display: none;
+}
+.day-panel.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+  margin-top: 5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tablet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.tablet-side {
+  margin-left: 6rem;
+  margin-right: 4rem;
+}
+.tablet-text-title {
+  font-size: 3rem;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  font-family: var(--font-primary);
+}
+.tablet-sub-text {
+  font-weight: 300;
+  font-size: var(--sub-heading);
+  line-height: 1.6;
+  font-family: var(--font-primary);
+}
+
+.relief {
+  position: relative;
+  padding-left: 38px;
+}
+.relief::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  bottom: 6px;
+  width: 1.5px;
+  background: linear-gradient(var(--text-white));
+  /* opacity: 0.55; */
+}
+.stop {
+  position: relative;
+  padding: 0 0 34px 0;
+}
+.stop:last-child {
+  padding-bottom: 0;
+}
+.stop::before {
+  content: "";
+  position: absolute;
+  left: -41px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2.5px solid var(--text-primary);
+  background: white;
+  width: 25px;
+}
+.stop .time {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: var(--white);
+}
+.stop h4 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-top: 6px;
+}
+.stop p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-top: 4px;
+  max-width: 48ch;
+  line-height: 1.55;
+  font-family: var(--font-primary);
+}
+
+/* Picuter of place to visit */
+.place-header {
+  font-family: var(--font-arbutus);
+  font-size: 13px;
+}
+.place-visit-title {
+  font-family: var(--font-arbutus);
+  font-size: var(--text-header);
+  padding-right: 45%;
+}
+.place-cards {
+  background-color: rgba(var(--white), var(--cd-opacity));
+  width: 400px;
+  height: 430px;
+  border-radius: 10px;
+}
+.place-image {
+  height: 280px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+.place-cards h3 {
+  font-family: var(--font-arbutus);
+  font-size: 27px;
+}
+
+/* food info */
+.food-header {
+  font-family: var(--font-arbutus);
+  font-size: 13px;
+}
+.food-title {
+  font-family: var(--font-arbutus);
+  font-size: var(--text-header);
+  padding-right: 30%;
+}
+.food-info {
+  border-bottom: 1px solid var(--text-white);
+}
+.food-name {
+  font-family: var(--font-primary);
+  font-size: 25px;
+}
+.food-desc {
+  font-family: var(--font-primary);
+  font-size: 12px;
+}
+.food-images {
+  padding: 0px 100px;
+}
+.food-image {
+  width: 150px;
+  height: 150px;
+}
+
+/* Hotel */
+.hotel-image {
+  width: 600px;
+  height: 500px;
+}
+.hotel-title {
+  font-family: var(--font-arbutus);
+  font-size: var(--text-header);
+  padding-right: 20%;
+  padding-left: 10%;
+  padding-bottom: 10%;
+}
+.hotel-desc {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+  padding-left: 10%;
+  padding-right: 20%;
+}
+
+/* include */
+.include-text {
+  font-family: var(--font-arbutus);
+  font-size: 13px;
+}
+.include-title {
+  font-family: var(--font-arbutus);
+  font-size: var(--text-header);
+}
+.include-card {
+  background-color: rgba(var(--white), var(--cd-opacity));
+  border-radius: 10px;
+}
+.include-list {
+  font-family: var(--font-primary);
+  font-size: 27px;
+}
+
+/* feedback */
+.feedback {
+  font-family: var(--font-arbutus);
+  font-size: 13px;
+}
+
+.feedback-text {
+  font-family: var(--font-arbutus);
+  font-size: var(--text-header);
+  padding-right: 30%;
+}
+
+/* Book tour */
+.book-text {
+  font-family: var(--font-arbutus);
+  font-size: 13px;
+}
+.book-title {
+  font-family: var(--font-arbutus);
+  font-size: var(--text-header);
+  padding: 0 25%;
+}
+.book-desc {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+  padding: 0 25%;
+}
+.book-btn {
+  background-color: var(--text-primary);
+  text-decoration: none;
+  /* width: 100px; */
+  height: 50px;
+  margin: 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 95%;
+  border-radius: 5px;
+}
+.book-btn:hover {
+  transform: 0.5s ease-out;
+}
+.book-btn span {
+  font-family: var(--font-arbutus);
+  font-size: 15px;
+}

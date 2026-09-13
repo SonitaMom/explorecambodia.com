@@ -1,0 +1,227 @@
+@import url("../css/variables.css");
+.service-hero {
+  padding-top: 7.3vh;
+  height: 750px;
+  /* filter: brightness(0.4); */
+}
+
+.service-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(var(--bg-color1), var(--bg-color-opacity));
+  pointer-events: none;
+  z-index: 1;
+}
+.service-images {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.service-image {
+  object-position: right center;
+}
+
+.service-header {
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.service-header-text {
+  font-family: var(--font-heading);
+  font-size: var(--header-text);
+}
+.service-sub-header {
+  font-family: var(--font-primary);
+  font-size: var(--sub-header-text);
+  margin: 20px 50px;
+  filter: brightness(0.85);
+}
+
+.guide-header-text {
+  font-family: var(--font-heading);
+  font-size: var(--text-header);
+}
+.guide-sub-header {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+}
+.tour-guide-cards {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+.guide-cards {
+  background-color: rgba(var(--white), var(--cd-opacity));
+  border-radius: var(--cd1-radius);
+  height: 500px;
+  width: 360px;
+}
+
+.guide-cards img {
+  border-top-left-radius: var(--cd1-radius);
+  border-top-right-radius: var(--cd1-radius);
+  height: 360px;
+  object-position: top center;
+}
+
+.guide-names,
+.guide-exper,
+.guide-position {
+  font-family: var(--font-primary);
+}
+.guide-names {
+  font-size: 35px;
+}
+.guide-position,
+.guide-exper {
+  font-size: 20px;
+}
+.hotel-icon {
+  font-size: 30px;
+}
+.hotel-head {
+  font-family: var(--font-primary);
+  font-size: 20px;
+}
+.hotel-header {
+  font-family: var(--font-heading);
+  font-size: var(--text-header);
+}
+
+.hotel-sub-head {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+}
+.hotel-cards {
+  background-color: rgba(var(--white), var(--cd-opacity));
+  width: 360px;
+  height: 560px;
+  border-radius: var(--cd1-radius);
+}
+.hotel-image {
+  border-top-left-radius: var(--cd1-radius);
+  border-top-right-radius: var(--cd1-radius);
+  height: 300px;
+}
+
+.location-name,
+.hotel-text {
+  font-family: var(--font-primary);
+}
+.partner-hotel-cards {
+  margin: 80px 0px;
+}
+
+/* transport */
+.transport-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-header);
+}
+.transport-sub-text {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+}
+.transport-card {
+  background-color: rgba(var(--white), var(--cd-opacity));
+  height: 400px;
+  width: 370px;
+  border-radius: var(--cd1-radius);
+}
+.transport-image {
+  border-top-left-radius: var(--cd1-radius);
+  border-top-right-radius: var(--cd1-radius);
+  height: 300px;
+  object-fit: cover;
+}
+.hotels-partner {
+  margin: 100px 0;
+}
+/* why our price  */
+.why-us-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-header);
+}
+.why-us-sub-title {
+  font-size: var(--sub-heading);
+  font-family: var(--font-primary);
+}
+.why-us-card {
+  /* color: var(--text-success-bright); */
+  background-color: rgba(var(--white), var(--cd-opacity));
+  width: 20rem;
+  height: 5rem;
+  border-radius: 10px 20px 10px 20px;
+}
+.why-us-text {
+  font-family: var(--font-primary);
+  font-size: 25px;
+}
+
+/* support */
+.support-line {
+  background-color: var(--text-white);
+  width: 2px;
+  height: auto;
+}
+.support-head-text {
+  font-family: var(--font-primary);
+  font-size: 15px;
+}
+.support-header {
+  font-family: var(--font-heading);
+  font-size: var(--text-header);
+}
+.support-sub-text {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+}
+.support-cards {
+  margin: 2rem 17rem;
+}
+.support-card {
+  background-color: rgba(var(--white), var(--cd-opacity));
+  width: 20rem;
+  height: 7rem;
+  border-radius: var(--cd1-radius);
+}
+.support-card-text {
+  font-family: var(--font-heading);
+  font-size: 20px;
+}
+.support-card-sub-text {
+  font-family: var(--font-primary);
+  font-size: 16px;
+}
+
+.support-footer-text {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+}
+/* why travel with us  */
+.travel-w-us-line {
+  background-color: var(--text-white);
+  width: 40px;
+  height: 2px;
+}
+
+.travel-w-us-heading {
+  font-family: var(--font-primary);
+  font-size: 16px;
+}
+.travel-w-us-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-header);
+}
+.travel-w-us-sub-text,
+.travel-w-us-text {
+  font-family: var(--font-primary);
+  font-size: var(--sub-heading);
+}
+.travel-w-us-info {
+  line-height: 60px;
+}
