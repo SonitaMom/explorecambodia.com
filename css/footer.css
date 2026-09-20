@@ -3,35 +3,54 @@
 #footer {
   background-color: var(--medium-blue);
 }
+
+/* Logo */
 .logo-img {
   width: 130px;
   height: 130px;
   border: 3px solid var(--text-primary);
+  object-fit: cover;
 }
 
-.ooter-com-name {
+/* Company Name */
+.footer-com-name {
+  font-family: var(--font-heading);
   font-size: 40px;
 }
 
+/* Description */
 .footer-text {
   font-family: var(--font-primary);
-  font-size: 25px;
+  font-size: 20px;
+  line-height: 1.7;
 }
 
+/* Footer Heading */
 .footer-info {
   font-family: var(--font-primary);
   color: var(--text-success-bright);
   font-size: 25px;
 }
 
-.dropdown-toggle {
-  cursor: pointer;
-}
+/* Quick Links */
 .page-links p {
   width: fit-content;
-  /* font-family: var(--font-primary); */
   font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.page-link {
   color: var(--text-white);
+  text-decoration: none;
+}
+
+.page-link:hover {
+  color: var(--text-primary);
+}
+
+/* Dropdown */
+.dropdown-toggle {
+  cursor: pointer;
 }
 
 .dropdown-menu a {
@@ -39,31 +58,138 @@
   font-family: var(--font-primary);
 }
 
-.page-links p:hover {
-  color: var(--text-primary);
-}
+/* Contact */
 .contact-links {
-  line-height: 40px;
+  line-height: 1.5;
 }
+
 .contact-links a {
   text-decoration: none;
+}
+
+.contact-links span {
+  color: var(--text-white);
+  font-size: 18px;
 }
 
 .contact-links span:hover {
   color: var(--text-primary);
 }
 
-.contact-links span {
-  color: var(--text-white);
-  font-size: 20px;
-}
-
 .contact-links i {
-  font-size: 25px;
+  font-size: 22px;
   color: var(--text-success-bright);
+  flex-shrink: 0;
 }
 
+/* Social Media */
 .social-icons img {
   width: 40px;
   height: 40px;
+  object-fit: cover;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 991.98px) {
+
+  .footer-com-name {
+    font-size: 32px;
+  }
+
+  .footer-text {
+    font-size: 18px;
+  }
+
+  .footer-info {
+    font-size: 22px;
+  }
+
+  .contact-links span {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 575.98px) {
+
+  .logo-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .footer-com-name {
+    font-size: 25px;
+  }
+
+  .footer-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .footer-info {
+    font-size: 20px;
+    margin-top: 10px !important;
+  }
+
+  .page-links p {
+    font-size: 17px;
+  }
+
+  .contact-links span {
+    font-size: 15px;
+  }
+
+  .contact-links i {
+    font-size: 19px;
+  }
+
+  .social-icons img {
+    width: 35px;
+    height: 35px;
+  }
+
+}
+
+
+@media (max-width: 399.98px) {
+
+  .logo-img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .footer-com-name {
+    font-size: 21px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+  }
+
+  .footer-info {
+    font-size: 18px;
+  }
+
+  .page-links p {
+    font-size: 15px;
+  }
+
+  .contact-links span {
+    font-size: 14px;
+  }
+
+  .social-icons img {
+    width: 32px;
+    height: 32px;
+  }
+
 }

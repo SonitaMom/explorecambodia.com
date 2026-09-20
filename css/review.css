@@ -8,26 +8,146 @@
 .review-header {
   font-family: var(--font-heading);
   font-size: var(--text-header);
+  line-height: 1.2;
 }
+
 .review-subhead {
   font-family: var(--font-primary);
   font-size: var(--sub-heading);
+  line-height: 1.6;
 }
+
+/* Review Image */
+.review-image {
+  width: 100%;
+}
+
 .review-image img {
   width: 170px;
   height: 170px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--text-primary);
-  /* object-position: top center; */
 }
+
+/* Traveller Name */
 .traveller-name {
   font-family: var(--font-primary);
   font-size: 30px;
 }
+
+/* Review Card */
 .review-cards {
   background-color: rgba(var(--white), var(--cd-opacity));
-  width: 350px;
-  height: 420px;
+  width: 100%;
+  min-height: 420px;
+  height: 100%;
   border-radius: var(--cd-radius);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Text */
+.review-cards .card-text {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+}
+
+/* =========================
+   Tablet
+========================= */
+@media (max-width: 991.98px) {
+
+  .review-header {
+    font-size: 40px;
+  }
+
+  .review-subhead {
+    font-size: 18px;
+  }
+
+  .review-cards {
+    min-height: 400px;
+  }
+
+  .review-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .traveller-name {
+    font-size: 26px;
+  }
+
+}
+
+
+/* =========================
+   Mobile
+========================= */
+@media (max-width: 575.98px) {
+
+  .review-head {
+    font-size: 14px;
+  }
+
+  .review-header {
+    font-size: 30px;
+  }
+
+  .review-subhead {
+    font-size: 15px;
+  }
+
+  .review-cards {
+    min-height: 380px;
+  }
+
+  .review-image img {
+    width: 135px;
+    height: 135px;
+  }
+
+  .traveller-name {
+    font-size: 23px;
+  }
+
+  .review-cards .card-text {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================
+   Small Mobile
+========================= */
+@media (max-width: 399.98px) {
+
+  .review-header {
+    font-size: 27px;
+  }
+
+  .review-subhead {
+    font-size: 14px;
+  }
+
+  .review-cards {
+    min-height: 360px;
+  }
+
+  .review-image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .traveller-name {
+    font-size: 20px;
+  }
+
+  .review-cards .card-text {
+    font-size: 14px;
+  }
+
 }

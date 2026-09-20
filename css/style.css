@@ -35,55 +35,64 @@ body {
   color: var(--text-primary);
   border-bottom: 1px solid var(--text-primary);
 }
-
+/* Hero Section */
 .hero-header {
-  display: block;
-  padding-top: 7.3vh;
-  /* height: 800px; */
-}
-.hero-image-container {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
   position: relative;
+  width: 100%;
+  min-height: 700px;
+  padding-top: 7.3vh;
+}
+
+.hero-image-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .hero-image-container::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
+
   background: linear-gradient(
     to right,
     rgba(15, 23, 42, 0.8) 0%,
     rgba(15, 23, 42, 0.8) 30%,
     rgba(15, 23, 42, 0.7) 40%,
     rgba(15, 23, 42, 0.49) 50%,
-    /* rgba(15, 23, 42, 0.5) 60%, */ rgba(15, 23, 42, 0.1) 55%
+    rgba(15, 23, 42, 0.1) 70%
   );
+
   pointer-events: none;
   z-index: 1;
 }
+
 .home-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   object-position: center;
+  display: block;
+
   transform: scaleX(-1);
-  position: relative;
+
   user-select: none;
-  opacity: 70%;
-  /* object-position: top center; */
+  opacity: 0.7;
 }
+
 
 .hero-text {
   position: absolute;
   z-index: 2;
-  top: 23%;
+
+  top: 50%;
   left: 7%;
+
+  transform: translateY(-50%);
+
+  max-width: 650px;
 }
 
 .head-text {
@@ -91,47 +100,192 @@ body {
   font-family: var(--font-heading);
   font-size: 85px;
   font-weight: bold;
+  line-height: 1.05;
 }
-
 .sub-hero-text {
   font-family: var(--font-primary);
   font-size: 38px;
+  margin-bottom: 10px;
 }
+
 .sub1-hero-text {
   font-family: var(--font-heading);
   font-size: 30px;
-  padding-right: 60%;
+
+  max-width: 550px;
+  padding-right: 0;
 }
 
 .hero-buttons {
   width: 500px;
 }
+
 .btn-about,
 .btn-book {
   font-family: var(--font-arbutus);
   font-size: 20px;
+
   text-decoration: none;
   color: var(--text-white);
+
   width: 250px;
   height: 50px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: all 0.3s ease;
 }
 
 .btn-about {
   background-color: rgba(66, 100, 182, 0.5);
+
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+
   border-radius: var(--btn-radius);
   border: 2px solid var(--line-color);
 }
+
 .btn-book {
   background-color: var(--text-primary);
+
   border-radius: var(--btn-radius);
+
   backdrop-filter: blur(50px);
 }
 
+.btn-about:hover,
+.btn-book:hover {
+  transform: translateY(-3px);
+}
+
+
+@media (max-width: 991.98px) {
+
+  .hero-header {
+    min-height: 650px;
+  }
+
+  .hero-text {
+    left: 5%;
+    max-width: 600px;
+  }
+
+  .head-text {
+    font-size: 65px;
+  }
+
+  .sub-hero-text {
+    font-size: 30px;
+  }
+
+  .sub1-hero-text {
+    font-size: 24px;
+    max-width: 450px;
+  }
+
+  .hero-buttons {
+    width: 450px;
+  }
+
+  .btn-about,
+  .btn-book {
+    width: 210px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575.98px) {
+
+  .hero-header {
+    min-height: 650px;
+    padding-top: 60px;
+  }
+
+  .hero-image-container::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(15, 23, 42, 0.65),
+      rgba(15, 23, 42, 0.8)
+    );
+  }
+
+  .hero-text {
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+    transform: translateY(-50%);
+  }
+
+  .head-text {
+    font-size: 48px;
+    line-height: 1.05;
+  }
+
+  .sub-hero-text {
+    font-size: 25px;
+    margin-top: 15px;
+  }
+
+  .sub1-hero-text {
+    font-size: 20px;
+    line-height: 1.4;
+
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    margin-top: 30px !important;
+  }
+
+  .btn-about,
+  .btn-book {
+    width: 100%;
+    height: 48px;
+
+    font-size: 17px;
+  }
+}
+
+
+@media (max-width: 399.98px) {
+
+  .hero-header {
+    min-height: 600px;
+  }
+
+  .hero-text {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .head-text {
+    font-size: 40px;
+  }
+
+  .sub-hero-text {
+    font-size: 22px;
+  }
+
+  .sub1-hero-text {
+    font-size: 17px;
+  }
+
+  .btn-about,
+  .btn-book {
+    height: 45px;
+    font-size: 15px;
+  }
+}
 /* Tour section */
 .my-tour {
   font-family: var(--font-arbutus);
@@ -142,18 +296,42 @@ body {
 .sub-tour-text {
   font-family: var(--font-primary);
   font-size: 20px;
-  /* letter-spacing: 1px; */
+  max-width: 900px;
+  line-height: 1.6;
 }
 
+
+/* =========================
+   TOUR CARD
+========================= */
+
 .tour-card-items {
-  height: 500px;
-  width: 370px;
-  background-color: rgba(var(--white), var(--cd-opacity));
+  width: 100%;
+  min-height: 500px;
+
+  background-color: rgba(
+    var(--white),
+    var(--cd-opacity)
+  );
+
   border-radius: var(--cd-radius);
+
+  overflow: hidden;
 }
+
+
+/* =========================
+   IMAGE
+========================= */
+
 .tour-image {
-  border-radius: 56px 56px 0 0;
+  display: block;
+
+  width: 100%;
   height: 300px;
+
+  border-radius: 56px 56px 0 0;
+
   position: relative;
   overflow: hidden;
 }
@@ -161,43 +339,63 @@ body {
 .tour-image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 
   transition:
-    transform 0.1s ease,
+    transform 0.3s ease,
     filter 0.3s ease;
 }
+
 .tour-image:hover img {
   transform: scale(1.05);
   filter: brightness(0.6);
 }
 
+
+/* =========================
+   ARROW
+========================= */
+
 .arrow-icon {
   position: absolute;
+
   top: 50%;
   left: 50%;
+
+  transform: translate(-50%, -50%);
+
   color: var(--text-white);
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-size: 30px;
+
   opacity: 0;
+
   transition:
     opacity 0.3s ease,
-    transform 0.3s ease,
-    background-color 0.3s ease;
+    transform 0.3s ease;
 }
 
 .tour-image:hover .arrow-icon {
   opacity: 1;
 }
 
+
+/* =========================
+   CARD CONTENT
+========================= */
+
 .card-title {
   font-family: var(--font-heading);
   font-size: 20px;
 }
+
 .tour-rating-stars {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .card-text {
@@ -205,27 +403,181 @@ body {
   font-size: 18px;
 }
 
+
+/* =========================
+   BUTTONS
+========================= */
+
+.tour-card-btns {
+  width: 100%;
+}
+
 .tour-card-btns a {
   font-family: var(--font-arbutus);
+
   font-size: 15px;
+
   color: var(--text-white);
+
   text-decoration: none;
   font-weight: bold;
-  width: 170px;
-  text-align: center;
+
+  width: 50%;
+  height: 50px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+
+  text-align: center;
+
   border-radius: var(--btn-radius);
+
+  transition: all 0.3s ease;
 }
 
 .tour-view-btn {
   background-color: var(--btn-color);
 }
+
 .tour-book-btn {
-  background-color: rgba(var(--white), var(--cd-opacity));
+  background-color: rgba(
+    var(--white),
+    var(--cd-opacity)
+  );
+
   border: 2px solid var(--line-color);
+}
+
+.tour-card-btns a:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   TABLET
+   Bootstrap md: 768px
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .my-tour {
+    font-size: 38px;
+  }
+
+  .sub-tour-text {
+    font-size: 18px;
+  }
+
+  .tour-image {
+    height: 260px;
+  }
+
+  .tour-card-items {
+    min-height: 480px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .tour-rating-stars {
+    font-size: 15px;
+  }
+
+  .card-text {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   Bootstrap sm: < 576px
+========================================= */
+
+@media (max-width: 575.98px) {
+
+  .my-tour {
+    font-size: 32px;
+  }
+
+  .sub-tour-text {
+    font-size: 16px;
+    line-height: 1.5;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .tour-image {
+    height: 250px;
+    border-radius: 35px 35px 0 0;
+  }
+
+  .tour-card-items {
+    min-height: auto;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .tour-rating-stars {
+    font-size: 14px;
+  }
+
+  .card-text {
+    font-size: 15px;
+  }
+
+  .tour-card-btns {
+    gap: 8px;
+  }
+
+  .tour-card-btns a {
+    width: 50%;
+    height: 45px;
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   < 400px
+========================================= */
+
+@media (max-width: 399.98px) {
+
+  .my-tour {
+    font-size: 28px;
+  }
+
+  .sub-tour-text {
+    font-size: 14px;
+  }
+
+  .tour-image {
+    height: 220px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .tour-rating-stars {
+    font-size: 12px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  .tour-card-btns a {
+    height: 42px;
+    font-size: 12px;
+  }
 }
 
 /* Why choose us */
@@ -235,68 +587,194 @@ body {
   width: 3%;
   padding: 0 20px;
 }
+
 .choose-us-header {
   font-family: var(--font-primary);
   font-size: 17px;
 }
+
 .choose-us-title {
   font-family: var(--font-heading);
   font-size: 50px;
+  line-height: 1.2;
 }
+
 .choose-us-text {
   font-family: var(--font-primary);
   font-size: var(--sub-heading);
+  line-height: 1.6;
 }
 
+/* Card */
 .choose-us-cards {
   background-color: rgba(var(--white), var(--cd-opacity));
-  width: 340px;
-  height: 400px;
+  width: 100%;
+  min-height: 400px;
+  height: 100%;
   border-radius: var(--cd-radius);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .choose-us-hero-cards {
   font-family: var(--font-primary);
   font-size: 15px;
 }
-.card-body {
-  height: 20px;
-}
 
 .choose-us-icons {
   width: 47px;
   height: 47px;
   color: var(--text-success-bright);
+  flex-shrink: 0;
 }
 
 .choose-us-text-cards {
   font-family: var(--font-heading);
   font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 0;
 }
 
 .underline {
   border-bottom: 3px solid var(--text-white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0px 20px;
+  margin: 0 20px;
+}
+
+.choose-us-cards .card-text {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 .service-view-btn {
   background-color: var(--btn-color);
   border-radius: var(--btn-radius);
   text-decoration: none;
+
   font-family: var(--font-heading);
   font-size: 20px;
-  height: 40px;
-  margin: 0 20px;
+
+  min-height: 40px;
+  margin: 0 20px 20px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 5px 10px;
 }
 
-@media (max-width : 992px){
 
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 991.98px) {
+
+  .choose-us-title {
+    font-size: 40px;
+  }
+
+  .choose-us-text {
+    font-size: 18px;
+  }
+
+  .choose-us-cards {
+    min-height: 390px;
+  }
+
+  .choose-us-icons {
+    width: 42px;
+    height: 42px;
+  }
+
+  .choose-us-text-cards {
+    font-size: 21px;
+  }
 }
 
 
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 575.98px) {
+
+  .line {
+    width: 8%;
+    padding: 0 10px;
+  }
+
+  .choose-us-header {
+    font-size: 14px;
+  }
+
+  .choose-us-title {
+    font-size: 30px;
+  }
+
+  .choose-us-text {
+    font-size: 15px;
+  }
+
+  .choose-us-cards {
+    min-height: 370px;
+  }
+
+  .choose-us-hero-cards {
+    font-size: 13px;
+  }
+
+  .choose-us-icons {
+    width: 38px;
+    height: 38px;
+  }
+
+  .choose-us-text-cards {
+    font-size: 18px;
+  }
+
+  .choose-us-cards .card-text {
+    font-size: 15px;
+  }
+
+  .service-view-btn {
+    font-size: 17px;
+    min-height: 38px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 399.98px) {
+
+  .choose-us-title {
+    font-size: 27px;
+  }
+
+  .choose-us-text {
+    font-size: 14px;
+  }
+
+  .choose-us-cards {
+    min-height: 350px;
+  }
+
+  .choose-us-icons {
+    width: 34px;
+    height: 34px;
+  }
+
+  .choose-us-text-cards {
+    font-size: 16px;
+  }
+
+  .choose-us-cards .card-text {
+    font-size: 14px;
+  }
+
+  .service-view-btn {
+    font-size: 15px;
+  }
+}
